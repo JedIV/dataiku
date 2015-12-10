@@ -3,6 +3,9 @@
 # in preparation for randomForest
 # They were grabbed from:
 # Data Mining Algorithms Explained Using R by Pawel Cichosz
+# In general, I found the above book (which I happily already owned)
+# to be invaluable in completing this problem, as this dataset is used
+# in it.
 
 #get x variables
 x.vars <- function(formula, data)
