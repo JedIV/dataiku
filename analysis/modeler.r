@@ -101,8 +101,7 @@ points(optimal_tree_fpr, optimal_tree_tpr)
 # Thats a bit better. We can also weight our model's misclassification
 # costs since we have
 # so many more under fifty than over fifty.
-# A nice rule of thumb is to weight by approximately the ratio
-# of over to under. Here I weight at 5 to 1.
+# Here I weight at 5 to 1
 
 weighted_tree <- rpart(income_over_under_fifty ~., c_train,
                       weights = ifelse(c_train$income_over_under_fifty == 'upper', 5, 1))

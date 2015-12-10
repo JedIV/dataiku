@@ -29,7 +29,7 @@ agg <- function(v, m, comb.val="other")
          combined=comb.val)
 }
 
-transmod_all <- function(transm, condf=function(v) TRUE)
+transmod.all <- function(transm, condf=function(v) TRUE)
 {
   function(formula, data, ...)
   {
@@ -40,7 +40,7 @@ transmod_all <- function(transm, condf=function(v) TRUE)
   } 
 }
 
-agg_all <- transmod_all(agg, is.factor) 
+agg_all <- transmod.all(agg, is.factor) 
 
 predict.transmod <- function(pred.transm)
 {
